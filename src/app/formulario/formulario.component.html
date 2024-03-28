@@ -1,0 +1,38 @@
+<form class="form">
+  <div class="row">
+    <div class="form-group col-md-2">
+      <label for="nombre" class="visually-hidden">Nombre</label>
+      <input
+        type="text"
+        name="nombre"
+        id="nombre"
+        placeholder="nombre"
+        class="form-control"
+        #nombreRef
+      />
+      <!--  [(ngModel)]="nombreInput" two way binging -->
+    </div>
+    <div class="form-group col-md-2">
+      <label for="apellido" class="visually-hidden">Apellido</label>
+      <input
+        type="text"
+        name="apellido"
+        id="apellido"
+        placeholder="apellido"
+        class="form-control"
+        #apellidoRef
+      />
+      <!--  #appelidoRef local reference -->
+    </div>
+    <div class="col-md-2">
+      <!-- (click)="agregarPersona(nombreRef, appelidoRef)" local reference -->
+      <button
+        type="submit"
+        class="btn btn-primary"
+        (click)="agregarPersona()"
+      >
+        Agregar
+      </button>
+    </div>
+  </div>
+</form>
