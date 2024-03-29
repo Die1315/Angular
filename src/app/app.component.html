@@ -2,11 +2,9 @@
   <div class="col">
     <h3>{{ titulo }}</h3>
   </div>
-  <hr/>
-  <app-formulario
-    (personaCreada)="personaAgregada($event)"
-  ></app-formulario>
-  <hr/>
+  <hr />
+  <app-formulario></app-formulario>
+  <hr />
   <app-persona
     *ngFor="let personaElemento of personas; let i = index"
     [persona]="personaElemento"

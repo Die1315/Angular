@@ -10,8 +10,7 @@ import { PersonaService } from './persona.service';
 })
 export class AppComponent {
   constructor(
-    private loggingService: LoggingService,
-    private personasService: PersonaService
+   private personasService: PersonaService
   ) {}
 
   ngOnInit(){
@@ -20,9 +19,5 @@ export class AppComponent {
 
   titulo = 'Listado de personas';
   personas: Persona[] = [];
-  personaAgregada(persona: Persona) {
-    //   this.personas.push(persona)
-    //   this.loggingService.enviaMensajeConsola('hola ' + persona)
-    this.personasService.agregarPersona(persona)
-  }
+
 }
